@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.collection.Player;
+import com.example.dto.PlayerDTO;
 import com.example.repository.IPlayerRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,14 @@ public class PlayerService {
 
     public Flux<Player> ObtenerJugadoresMayoresA35(Flux<Player> playerList){
         return playerList.filter(player -> player.age >= 35 );
+    }
+    //Converters
+    public PlayerDTO convertEntityToDTO(Player p){
+        return modelMapper.map(p, PlayerDTO.class);
+    }
+
+    public Player convertDTOToEntity (PlayerDTO pdto){
+        return modelMapper.map(pdto,Player.class);
     }
 
 }

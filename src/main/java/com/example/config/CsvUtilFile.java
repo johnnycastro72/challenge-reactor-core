@@ -1,5 +1,6 @@
 package com.example.config;
 
+import com.example.collection.Player;
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
 

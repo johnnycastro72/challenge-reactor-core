@@ -24,13 +24,13 @@ public class PlayerController {
 
 
     @GetMapping("/listas")
-    public Flux<Player> getListasRankingPlayers() {
+    public Flux<PlayerDTO> getListasRankingPlayers() {
         return playerService.ObtenerJugadoresMayoresA35();
     }
 
     @GetMapping
-    public Flux<Player> getFilteredPlayers() {
-        return playerRepository.findAll();
+    public Flux<PlayerDTO> getFilteredPlayers() {
+        return playerService.findAllPlayers();
     }
 
 

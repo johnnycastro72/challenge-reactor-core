@@ -18,7 +18,8 @@ public class PlayerService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public Flux<Player> ObtenerJugadoresMayoresA35(){
+    public Flux<PlayerDTO> ObtenerJugadoresMayoresA35(){
+        Flux<PlayerDTO> playerList = findAllPlayers();
         return playerList.filter(player -> player.age >= 35 );
     }
 

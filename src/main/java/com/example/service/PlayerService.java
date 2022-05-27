@@ -18,7 +18,7 @@ public class PlayerService {
     @Autowired
     private ModelMapper modelMapper;
 
-    public Flux<Player> ObtenerJugadoresMayoresA35(Flux<Player> playerList){
+    public Flux<Player> ObtenerJugadoresMayoresA35(){
         return playerList.filter(player -> player.age >= 35 );
     }
 
@@ -33,6 +33,7 @@ public class PlayerService {
     public Mono<PlayerDTO> findPlayerById(Integer id){
         return this.iPlayerRepository.findById(id).map(p -> convertEntityToDTO(p) );
     }
+
 
     //Converters
     public PlayerDTO convertEntityToDTO(Player p){

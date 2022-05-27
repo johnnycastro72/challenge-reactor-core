@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.collection;
 
 public class Player {
     public int id;

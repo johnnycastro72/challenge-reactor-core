@@ -5,5 +5,5 @@ import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IPlayerRepository extends ReactiveMongoRepository<Player, Integer> {
+public interface IPlayerRepository extends ReactiveMongoRepository<Player, String> {
 }
